@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="index.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <title>JM Store</title>
+    <script type="text/javascript" src="index.js"></script>
+</head>
+<body>
+    <header>
+        <a src="index.html"><img src="img/marca d'agua preta sem sombra.png" class="img-head"></a>
+        <button class="bnt-menu" onClick="menu()"><img src="img/menu.png" class="imgmenu"></button>
+        <button class="bnt-pesq" onClick="pesquisa()"><img src="img/Lupa.svg" class="imgpesq"></button>
+        <input type="text" id="pesqmain" class="pesq-close" list="list-first" placeholder="O que você procura?">
+            <datalist id="list-first">
+                <option value="PSG"></option>
+                <option value="Barcelona"></option>
+                <option value="Inter"></option>
+                <option value="Palmeiras"></option>
+            </datalist>
+
+        <!--menu-->		            
+
+        <div id="menu-open" class="menu">
+            <div class="menu-main">
+                <ul>
+                    <li class="name-menu">Menu</li>
+                    <li><a class="lis1" href="">Nacional</a></li>
+                    <li><a class="lis2" href="">Internacional</a></li>
+                    <li><a class="lis3" href="">Polo</a></li>
+                    <li><a class="lis4" href="">Corta Vento</a></li>
+                    <li><a class="lis5" href="">Contato</a></li>
+                </ul>
+                <div class="cadastro">
+                    <img src="img/icon.png">
+                    <h1>Entre / Cadastre-se</h1>
+                </div>
+                    <button class="exit-menu" onclick="menu()">
+                        <div class="bnt-y"></div>
+                        <div class="bnt-x"></div>
+                    </button>
+            </div>			              
+        </div>
+    </header>
+
+
+    <!-- carrosel -->
+<div class="slideshow-container">
+
+<div class="mySlides fade">
+  <img src="img/Propaganda_feed.png" class="img-carrosel">
+  <div class="text-carossel">PROMOÇÃO</div>
+</div>
+
+<div class="mySlides fade">
+  <img src="img/fundo camisa.png" class="img-carrosel">
+  <div class="text-carossel">LANÇAMENTO PSG</div>
+</div>
+
+<div class="mySlides fade">
+  <img src="img/Jaco liver.png" class="img-carrosel">
+  <div class="text-carossel">LANÇAMENTO CORTA-VENTO</div>
+</div>
+
+</div>
+<br>
+
+<div style="text-align:center">
+  <button class="dot" onclick="primeiraimg()"></button> 
+  <button class="dot" onclick="primeiraimg()"></button> 
+  <button class="dot" onclick="primeiraimg()"></button> 
+</div>
+
+<script>
+var slideIndex = 0;
+showSlides();
+
+function showSlides() {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
+  }
+  slideIndex++;
+  if (slideIndex > slides.length) {slideIndex = 1}    
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+  setTimeout(showSlides, 5000); // Change image every 2 seconds
+}
+
+function primeiraimg() {
+    var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
+  }
+  slideIndex++;
+  if (slideIndex > slides.length) {slideIndex =  1}    
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+}
+</script>
+
+
+<div class="linha1">
+
+</div>
+
+
+
+<h1 style="text-align: center; margin-top: 80px; font-weight: 500; color: yellow;">Destaques</h1>
+
+    <div class="cabide">
+        <div class="card1">
+            <div class="card">
+                <div class="efect-1">
+                    <div class="imgc">
+                        <img src="img/PNG camisa psg .png" class="camisa-first">
+                    </div>  
+                    <div class="text">
+                        <h3>Camisa PSG</h3>
+                        <h2 class="price">R$135,<small>00</small></h2>
+                        <a href="teste.html">Comprar</a> 
+                    </div>
+                </div>    
+            </div>
+        </div>
+
+        <div class="card2">
+            <div class="card">
+                <div class="efect-3">
+                    <div class="imgc">
+                        <img src="img/PNG Camisa inter milan.png" class="camisa-first">
+                    </div>
+                    <div class="text">
+                        <h3>Camisa Inter</h3>
+                        <h2 class="price">R$135,<small>00</small></h2>
+                        <a href="teste1.html">Comprar</a> 
+                    </div>
+                </div>    
+            </div>
+        </div>
+
+        <div class="card3">
+            <div class="card">
+                <div class="efect-2">
+                    <div class="imgc">
+                        <img src="img/Barc.png" class="camisa-first">
+                    </div>
+                    <div class="text-m">
+                        <h3>Camisa Barcelona</h3>
+                        <h2 class="price">R$135,<small>00</small></h2>
+                        <a href="teste2.html">Comprar</a> 
+                    </div>
+                </div>    
+            </div>
+        </div>
+
+        <div class="card4">
+            <div class="card">
+                <div class="efect-4">
+                    <div class="imgc">
+                        <img src="img/PNG camisa marselia.png" class="camisa-first">
+                    </div>
+                    <div class="text">
+                        <h3>Camisa Olympique de Marseill</h3>
+                        <h2 class="price">R$135,<small>00</small></h2>
+                        <a href="#">Comprar</a> 
+                    </div>
+                </div>    
+            </div>
+        </div>
+
+        <div class="card5">
+            <div class="card">
+                <div class="efect-1">
+                    <div class="imgc">
+                        <img src="img/PNG camisa psg azu.png" class="camisa-first">
+                    </div>
+                    <div class="text">
+                        <h3>Camisa PSG</h3>
+                        <h2 class="price">R$135,<small>00</small></h2>
+                        <a href="#">Comprar</a> 
+                    </div>
+                </div>    
+            </div>
+        </div>
+
+        <div class="card6" id="cardfinal">
+            <div class="card">
+                <div class="efect-5">
+                    <div class="imgc">
+                        <img src="img/PNG camisa liver.png" class="camisa-first">
+                    </div>
+                    <div class="text-m">
+                        <h3>Camisa Liverpool</h3>
+                        <h2 class="price">R$135,<small>00</small></h2>
+                        <a href="#">Comprar</a> 
+                    </div>
+                </div>    
+            </div>
+        </div>
+    </div>
+    <br>    <br>    <br>  
+
+        <h1 class="name-main-ligas">Ligas</h1>
+        <div class="main-ligas">
+        <div class="brasileirao">
+            <img class="img-brasileirao" src="img/brasileirao.png">
+        </div>
+        <div class="brasileirao">
+            <img class="img-bundesliga" src="img/Bundesliga.png">
+        </div>
+        <div class="brasileirao">
+            <img class="img-premierleague" src="img/Premier League.png">
+        </div>
+        <div class="brasileirao">
+            <img class="img-seriaa" src="img/Serie_A.png">
+        </div>
+        <div class="brasileirao">
+            <img class="img-laliga" src="img/laliga-logo.png">
+        </div>
+        <div class="brasileirao">
+            <img class="img-ligue1" src="img/ligue1.png">
+        </div>
+    </div>
+
+            <!--carrinho-->
+            <button id="z" class="bnt-car-exit" onclick="produto.carrinho(); produto.carrinho1()">Carrinho</button>
+
+            <div id="main-open" class="carrinho">
+                <div class="carrinho-main">
+                      <p class="name-car">Carrinho</p>
+    
+                      <div  class="pedido-vazio">
+                          <div class="pedido-main">
+                              <div class="tabela">
+                                  <table>
+                                      <tbody id="carrinho-produtos">
+          
+                                      </tbody>
+                                  </table>
+                              </div>
+                          </div>
+                          <h2 id="totalm" style="text-align: center; margin: 0;">Total : </h2>
+
+                        <button class="bnt-finalizar">Finalizar Compra</button>
+                    </div>
+                    
+                    <button class="exit-car" onclick="produto.carrinho(); produto.carrinho1()">
+                        <div class="bnt-y"></div>
+                        <div class="bnt-x"></div>
+                    </button>
+
+                </div>
+            </div>       
+    <br>    <br>    <br>      <br>    <br>    <br>  
+    <div class="back-to-top" id="arrowTop" style="display: none;">
+        <a href="#top" ><img src="img/arrow-top.svg" id="arrow"></a>
+    </div>
+    <footer>
+
+    </footer>
+</body>
+</html>

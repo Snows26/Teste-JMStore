@@ -1,0 +1,724 @@
+html{
+    scroll-behavior: smooth;
+}
+body{
+    background: #2b2b2e;
+    padding: 0;
+    margin: 0;
+    font-family: 'Bebas Neue', cursive;
+}
+header{
+    padding-top: 10px;
+    padding-bottom: 0;
+    padding-left: 0;
+    padding-right: 0;
+    margin: 0;
+    width: 100%;
+    height: 84px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    background: #ffe600;
+
+}
+header a .img-head{
+    width: 70px;
+    grid-row-start: 1;
+    grid-column: 2;
+    cursor: pointer;
+}
+header a{
+    width: 70px;
+    margin:  0 auto;
+}
+header .bnt-pesq{
+    width: 45px;
+    padding: 10px;
+    grid-row: 1;
+    grid-column: 3;
+    display: flex;
+    position: relative;
+    right: -70%;
+    background: none;
+    border: none;
+    cursor: pointer;
+    z-index: 2;
+    margin-top: 17px;
+}
+.bnt-pesq .imgpesq{ 
+    width: 30px;
+    padding: 0;
+    grid-row: 1;
+    grid-column: 3;
+    display: flex;
+    position: relative;
+}
+
+header .pesq-close{
+    height: 16px;
+    width: 142%;
+    margin-top: 0.8rem;
+    padding: 10px;
+    padding-right: 5px;
+    border-top: solid 1px black;
+    border-bottom: solid 1px black;
+    background-color: rgb(231, 208, 0);
+    box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.061);
+    grid-row: 2;
+    grid-column-start: 1;
+    grid-column-end: 3;
+    z-index: -3;
+    opacity: 0;
+}
+
+header .pesq{
+    height: 38px;
+    width: 148.6%;
+    margin-top: 0.5rem;
+    padding: 5px;
+    padding-right: 8px;
+    border-top: solid 1px black;
+    border-bottom: solid 1px black;
+    background-color: rgb(231, 208, 0);
+    box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.061);
+    grid-row: 2;
+    grid-column-start: 1;
+    grid-column-end: 3;
+    z-index: 1;
+    opacity: 1;
+}
+header .pesq:focus{
+    box-shadow: 0 0 0 0;
+    outline: 0;
+}
+header .pesq::placeholder{
+    font-size: 10pt;
+}
+header .info{
+    width: 17px;
+    height: 11px;
+    margin-left: 15%;
+    grid-row: 1;
+    grid-column: 1;
+    border: none;
+}
+.cabide{
+    display: flex;
+    width: 100%;
+    overflow-y: scroll;
+}
+div.card6{
+margin-right: 55px;
+}
+
+
+
+
+
+/* menu*/
+
+div.menu{
+display: none;
+}
+div.menu-open{
+height: 100%;
+width: 100%;
+top: 0;
+position: fixed; 
+left: 0px;
+z-index: 3;
+background:rgba(0, 0, 0, 0.915);
+transition: 0.3s;	
+}
+header .bnt-menu{
+width: 25px;
+height: 20px;
+padding: 0;
+grid-row: 1;
+grid-column: 1;
+display: flex;
+position: relative;
+left: 17%;
+background: none;
+border: none;
+cursor: pointer;
+z-index: 2;
+margin-top: 29px;
+}
+.bnt-menu .imgmenu{ 
+width: 25px;
+height: 20px;
+}
+div .exit-menu{
+width: 32px;
+height: 32px;
+position: absolute;
+left: 15px;
+top: 31px;
+background: none;
+border: none;   
+cursor: pointer;
+}
+.menu-main{
+text-align: left;
+}
+ul{
+list-style: none;
+margin: 0 auto;
+padding: 0;
+text-decoration: none;
+height: 100%;
+}
+.lis1, .lis2, .lis3, .lis4, .lis5{
+text-decoration: none;
+background-color: yellow;
+color: black;
+font-size: 16pt;
+border-top: solid 1px rgba(0, 0, 0, 0.26);
+border-bottom: solid 1px rgba(0, 0, 0, 0.26);
+padding-right: 100%;
+padding-left: 20px;
+padding-top: 10px;
+padding-bottom: 10px;
+text-align: center;
+white-space: nowrap;
+line-height: 45px;
+}
+
+ul .name-menu{
+text-align: center;
+color: yellow;
+font-size: 32pt;
+padding-top: 21px;
+padding-bottom: 50px;
+}
+.cadastro{
+    cursor: pointer;
+    max-width: 325px;
+    width: 25%;
+    height: 225px;
+    margin: 0 auto;
+    background-color: yellow;
+    border-radius: 25px;
+    margin-top: 50px;
+    }
+    .cadastro h1{
+    font-size: 20pt;
+    margin: 0 auto;
+    padding: 0;
+    text-align: center;
+    margin-top: 35px;
+    }
+    .cadastro img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 20px;
+    width: 125px;
+    
+    }
+
+
+/*carrinho*/
+
+
+.bnt-car{
+    position: fixed;
+    width: 100%;
+    height: 55px;
+    background-color: #ffe600;
+    border: none;
+    right: 0;
+    bottom: 0;
+    z-index: 2;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    font-size: 16pt;
+    font-family: 'Bebas Neue', cursive;
+    transition: 0.5s;
+    border: 1px solid #2b2b2e ;
+    cursor: pointer;
+}
+.bnt-car-exit{
+    position: fixed;
+    width: 100%;
+    height: 0px;
+    right: 0;
+    bottom: 0;
+    visibility: hidden;
+}
+
+div.carrinho{
+display: block;
+visibility: hidden;
+top: 100%;
+
+}
+div.main-open{
+height: 100%;
+width: 100%;
+top: 0;
+position: fixed; 
+right: 0px;
+z-index: 3;
+background:rgba(0, 0, 0, 0.915);
+transition: 0.6s;	
+}
+div.carrinho-main{
+position: absolute;  
+z-index: 100;
+height: 100%;
+width: 100%;
+}
+p.name-car{
+display: block;
+text-align: center;
+margin: auto 0;
+padding-top: 21px;
+justify-content: center;
+color: yellow;    
+font-size: 32pt;
+
+}
+
+div .exit-car{
+width: 32px;
+height: 32px;
+position: absolute;
+right: 15px;
+top: 31px;
+background: none;
+border: none;
+cursor: pointer;
+}
+.bnt-y{
+width: 22px;
+height: 2px;
+transform: rotateZ(138deg);
+background-color: rgb(255, 230, 0);
+position: absolute;
+border-radius: 25px ;
+}
+.bnt-x{
+width: 22px;
+height: 2px;
+transform: rotateZ(-138deg);
+background-color: rgb(255, 230, 0);
+position: absolute;
+border-radius: 25px;
+}
+.carrinho-main .pedido-vazio{
+    margin: 0 auto;
+    width: 50%;
+    height:64%;
+    background-color: yellow;
+    border-radius: 25px ;
+    margin-top: 80px;
+    padding: 2%;
+}
+
+.pedido-camisa::before{
+    content: 'ㅤㅤㅤㅤ PSG CAMISA ㅤㅤㅤR$135,00' ;
+    color: rgb(0, 0, 0);
+    width: 80%;
+    height: 60px;
+    background-color: yellow;
+    display: block;
+    margin: 0 auto;
+    margin-top: 10px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.5);
+    background: url('img/psg.jpg') no-repeat;
+    background-size: 60px;
+}
+
+.carrinho-main .pedido-vazio .bnt-finalizar{
+    background: black;
+    color: yellow;
+    border: none;
+    padding: 13px 0px;
+    border-radius: 25px;
+    font-size: 16pt;
+    white-space: nowrap;
+    font-family: 'Bebas Neue', cursive;
+    position: relative;
+    width: 80%;
+    display: block;
+    margin: 0 auto;
+    cursor: pointer;
+    }
+.main{
+    display: flex;
+}
+.glide{
+    max-width: 50%;
+    margin-top: 80px;
+}
+.container{
+    width: 10%;
+}
+.camisa{
+    min-width: 400px;
+    max-width: 75%;
+    width: 100%;
+    display: block;
+    text-align: center;
+    margin: 0 auto;
+}
+.camisa h1,.camisa h4{
+    margin-top: 0;
+    text-align: left;
+    color: #ffe600;
+    font-weight: 300;
+}
+.camisa h4{
+    color: #dac71b;
+    font-size: 55px;
+    font-weight: 50;
+    margin-top: 20px;
+}
+.camisa h1{
+    font-size: 40px;
+    margin: 100px 0px 0px 0px;
+}
+.adicionar{
+    width: 65%;
+    height: 60px;
+    border-radius: 10px;
+    background-color: #ffe600;
+    margin-top: 125px;
+    font-size: 24pt;
+    font-family: 'Bebas Neue', cursive;
+    display: block;
+    justify-content: start;
+    border: none;
+    cursor: pointer;
+}
+.adicionar:hover{
+    border: none;
+    background-color: #ffe600da;
+}
+.adicionar:active{
+    border: none;
+    background-color: #ffe600;
+}
+.div-tam{
+    width: 85%;
+    height: 40px;
+    display: block;
+}
+.div-tam p{
+    font-size: 20px;
+    color: rgb(173, 173, 173);
+    font-weight: 100;
+    margin: 0;
+    text-align:start;
+}
+.bnt-tam{
+    width: 35.2%;
+    height: 40px;
+    padding-left: 15px;
+    border-radius: 10px;
+    background-color: #ffe600;
+    margin-top: 0px;
+    font-size: 16pt;
+    font-family: 'Bebas Neue', cursive;
+    border: none;
+    display: flex;
+    justify-content: start;
+    cursor: pointer;
+}
+.bnt-tam:focus{
+    box-shadow: 0 0 0 0;
+    outline: 0;
+}
+.comprar{
+    width: 85%;
+    height: 40px;
+    display: block;
+    margin: auto;
+}
+.quant-junt{
+    width: 85%;
+    height: 40px;
+    display: block;
+}
+.quant-junt .quant{
+    width: 33%;
+    height: 38px;
+    padding-left: 15px;
+    border-radius: 10px;
+    background-color: #ffe600;
+    margin-top: 0px;
+    border: none;
+    display: flex;
+    justify-content: start;
+    font-size: 16pt;
+    font-family: 'Bebas Neue', cursive;
+}
+.quant-junt .quant:focus{
+    box-shadow: 0 0 0 0;
+    outline: 0;
+}
+.quant-junt p{
+    font-size: 20px;
+    color: rgb(173, 173, 173);
+    font-weight: 100;
+    margin: 40px 0px 0px 0px;
+    text-align:start;
+}
+
+
+/* carrinho-conteudo */
+
+td img{
+    width: 70px;
+    border-radius: 15px;
+    margin-top: 5px;
+}
+tbody tr td{
+    font-size: 12pt;
+
+}
+.t{
+    border-right: none;
+}
+table{
+    margin-top: 5px;
+    width: 100%;
+    height: 320px;
+    overflow-y: scroll;
+    text-align: center;
+    }
+
+tr td:nth-last-child(3){
+  text-align: left;
+}
+.tabela{
+    width: 100%;
+    height: 55vh;
+    overflow-y: scroll;
+}   
+.tabela::-webkit-scrollbar {
+    background: none;
+}
+.tabela::-webkit-scrollbar-thumb {
+    background: rgb(43, 43, 46);
+    border-radius: 15px;
+    border: solid yellow 5px;
+}
+.quantprod{
+    background-color: rgb(104, 104, 104);
+    border-radius: 50%;
+    padding: 1px;
+    padding-left: 8px;
+    padding-right: 8px;
+    top: 42vw;
+    left: 9vw;
+    position: absolute;
+
+}
+.back-to-top{
+    position: fixed;
+    bottom: 85px;
+    right: 30px;
+    height: 25px;
+    width: 25px;
+    background-color: rgb(255, 230, 0);
+    padding: 5px 5px 5px 5px;
+    border: 1px rgb(43, 43, 46) solid;
+    border-radius: 50%;
+    z-index: 1;
+}
+#arrow{
+    width: 25px;
+}
+.desc{
+    width: 85%;
+    display: block;
+    margin: auto;
+}
+.desc h2{
+    color: #f0f0ff;
+    font-size: 30pt;
+    font-weight: 400;
+    margin-bottom: 0px;
+}
+.desc p{
+    font-size: 15pt;
+    margin-top: 0px;
+    color: #f0f0ffb2;
+    font-weight: 350;
+}
+.hr1 {
+    border: 0;
+    border-top: 1px solid #f0f0ff;
+  }
+@media screen and (min-width: 20px) and (max-width: 820px){
+    header .bnt-pesq{
+        width: 45px;
+        padding: 10px;
+        grid-row: 1;
+        grid-column: 3;
+        display: flex;
+        position: relative;
+        right: -59%;
+        background: none;
+        border: none;
+        cursor: pointer;
+        z-index: 2;
+    }
+    .bnt-pesq .imgpesq{ 
+        width: 30px;
+        padding: 0;
+        grid-row: 1;
+        grid-column: 3;
+        display: flex;
+        position: relative;
+    }
+    header .pesq{
+        height: 38px;
+        width: 143.3%;
+    }
+    .cadastro{
+        cursor: pointer;
+        width: 65%;
+        height: 225px;
+        margin: 0 auto;
+        background-color: yellow;
+        border-radius: 25px;
+        margin-top: 50px;
+    }
+    .cadastro h1{
+        font-size: 20pt;
+        margin: 0 auto;
+        padding: 0;
+        text-align: center;
+        margin-top: 35px;
+    }
+    .cadastro img{
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        padding-top: 20px;
+        width: 125px;
+    }
+    .camisa{
+        min-width: 0px;
+        max-width: 100%;
+        width: 85%;
+        display: block;
+        margin: 0 auto;
+        margin-top: 55px;
+    }
+    .camisa h1,.camisa h4{
+        font-size: 35px;
+        margin-top: 0;
+        text-align: left;
+        color: #ffe600;
+        font-weight: 300;
+    }
+    .camisa h4{
+        color: #dac71b;
+        font-size: 45px;
+        font-weight: 50;
+        margin-top: 20px;
+    }
+    .div-tam{
+        width: 85%;
+        height: 40px;
+        display: block;
+        margin: auto;
+    }
+    .div-tam p{
+        font-size: 20px;
+        color: rgb(173, 173, 173);
+        font-weight: 100;
+        margin: 0;
+        text-align:start;
+    }
+    .bnt-tam{
+        width: 100%;
+        height: 40px;
+        padding-left: 15px;
+        border-radius: 10px;
+        background-color: #ffe600;
+        margin-top: 0px;
+        font-size: 16pt;
+        font-family: 'Bebas Neue', cursive;
+        border: none;
+        cursor: pointer;
+    }
+    .bnt-tam:focus{
+        box-shadow: 0 0 0 0;
+        outline: 0;
+    }
+    .comprar{
+        width: 85%;
+        height: 40px;
+        display: block;
+        margin: auto;
+    }
+    .quant-junt{
+        width: 85%;
+        height: 40px;
+        display: block;
+        margin: auto;
+    }
+    .quant-junt .quant{
+        width: 94.14%;
+        height: 35px;
+        padding-left: 15px;
+        border-radius: 10px;
+        background-color: #ffe600;
+        margin-top: 0px;
+        border: none;
+    }
+    .quant-junt .quant:focus{
+        box-shadow: 0 0 0 0;
+        outline: 0;
+    }
+    .quant-junt p{
+        font-size: 20px;
+        color: rgb(173, 173, 173);
+        font-weight: 100;
+        margin: 40px 0px 0px 0px;
+        text-align:start;
+    }
+    .adicionar{
+        width: 60%;
+        height: 40px;
+        border-radius: 10px;
+        background-color: #ffe600;
+        margin-top: 65px;
+        font-size: 16pt;
+        font-family: 'Bebas Neue', cursive;
+        display: inline-block;
+        justify-content: center;
+        border: none;
+        cursor: pointer;
+    }
+    .adicionar:hover{
+        border: none;
+        background-color: #ffe600da;
+    }
+    .adicionar:active{
+        border: none;
+        background-color: #ffe600;
+    }
+    .carrinho-main .pedido-vazio{
+        margin: 0 auto;
+        width: 85%;
+        height: 67vh;
+        background-color: yellow;
+        border-radius: 25px ;
+        margin-top: 80px;
+        padding: 2%;
+    }
+    .main{
+        display: block;
+    }
+    .glide{
+        margin-top: 0px;
+        max-width: 100%;
+    }
+}
+

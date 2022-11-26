@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PSG</title>
+    <link rel="stylesheet" href="node_modules/@glidejs/glide/dist/css/glide.core.min.css">
+    <link rel="stylesheet" href="node_modules/@glidejs/glide/dist/css/glide.theme.min.css">
+    <link rel="stylesheet" href="iziToast-master/dist/css/iziToast.min.css">
+    <link rel="stylesheet" href="teste.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">   
+    <script src="iziToast-master/dist/js/iziToast.min.js" type="text/javascript"></script>
+    <script src="index.js"></script>
+</head>
+<body>
+  <header>
+    <a href="index.html"><img src="img/marca d'agua preta sem sombra.png" class="img-head"></a>
+    <button class="bnt-menu" onClick="menu()"><img src="img/menu.png" class="imgmenu"></button>
+    <button class="bnt-pesq" onClick="pesquisa()"><img src="img/Lupa.svg" class="imgpesq"></button>
+    <input type="text" id="pesqmain" class="pesq-close" list="list-first" placeholder="O que você procura?">
+        <datalist id="list-first">
+            <option value="PSG"></option>
+            <option value="Barcelona"></option>
+            <option value="Inter"></option>
+            <option value="Palmeiras"></option>
+        </datalist>
+
+    <!--menu-->		            
+
+    <div id="menu-open" class="menu">
+        <div class="menu-main">
+            <ul>
+                <li class="name-menu">Menu</li>
+                <li><a class="lis1" href="">Nacional</a></li>
+                <li><a class="lis2" href="">Internacional</a></li>
+                <li><a class="lis3" href="">Polo</a></li>
+                <li><a class="lis4" href="">Corta Vento</a></li>
+                <li><a class="lis5" href="">Contato</a></li>
+            </ul>
+            <div class="cadastro">
+                <img src="img/icon.png">
+                <h1>Entre / Cadastre-se</h1>
+            </div>
+                <button class="exit-menu" onclick="menu()">
+                    <div class="bnt-y"></div>
+                    <div class="bnt-x"></div>
+                </button>
+        </div>			              
+    </div>
+</header>
+<main class="main">
+    <!--CARROCEL CELULAR-->
+        <div class="glide">
+            <div class="glide__track" data-glide-el="track">
+                <ul class="glide__slides">
+                    <li class="glide__slide"><img src="img/inter/inter1.jpg" class="camisa"></li>
+                    <li class="glide__slide"><img src="img/inter/inter2.png" class="camisa"></li>
+                    <li class="glide__slide"><img src="img/inter/inter3.jpg" class="camisa"></li>
+                    <li class="glide__slide"><img src="img/inter/inter4.jpg" class="camisa"></li>
+                    <li class="glide__slide"><img src="img/inter/inter5.jpg" class="camisa"></li>
+                    <li class="glide__slide"><img src="img/inter/inter6.jpg" class="camisa"></li>
+                    <li class="glide__slide"><img src="img/inter/inter7.jpg" class="camisa"></li>
+                    <li class="glide__slide"><img src="img/inter/inter8.jpg" class="camisa"></li>
+                    <li class="glide__slide"><img src="img/inter/inter9.jpg" class="camisa"></li>
+                    <li class="glide__slide"><img src="img/inter/inter10.jpg" class="camisa"></li>
+                </ul>
+            </div>
+            <div style="display: flex; justify-content: center; transform: translateY(-40px);" data-glide-el="controls">
+                <button class="glide__bullet" style="background-color: rgb(29, 32, 34); border: 0.1px solid #ffe600;" data-glide-dir="=0"></button>
+                <button class="glide__bullet" style="background-color: rgb(29, 32, 34); border: 0.1px solid #ffe600" data-glide-dir="=1"></button>
+                <button class="glide__bullet" style="background-color: rgb(29, 32, 34); border: 0.1px solid #ffe600" data-glide-dir="=2"></button>
+                <button class="glide__bullet" style="background-color: rgb(29, 32, 34); border: 0.1px solid #ffe600" data-glide-dir="=3"></button>
+                <button class="glide__bullet" style="background-color: rgb(29, 32, 34); border: 0.1px solid #ffe600" data-glide-dir="=4"></button>
+                <button class="glide__bullet" style="background-color: rgb(29, 32, 34); border: 0.1px solid #ffe600" data-glide-dir="=5"></button>
+                <button class="glide__bullet" style="background-color: rgb(29, 32, 34); border: 0.1px solid #ffe600" data-glide-dir="=6"></button>
+                <button class="glide__bullet" style="background-color: rgb(29, 32, 34); border: 0.1px solid #ffe600" data-glide-dir="=7"></button>
+                <button class="glide__bullet" style="background-color: rgb(29, 32, 34); border: 0.1px solid #ffe600" data-glide-dir="=8"></button>
+                <button class="glide__bullet" style="background-color: rgb(29, 32, 34); border: 0.1px solid #ffe600" data-glide-dir="=9"></button>
+
+            </div>
+        </div>
+    <script src="node_modules/@glidejs/glide/dist/glide.min.js"></script>
+    <script>
+        new Glide('.glide').mount()
+    </script>
+    <!--fecha carroucel-->
+
+
+
+    <div class="camisa">
+        <h1> 21/22 - camisa inter milan home </h1>
+        <h4>r$ 135,00</h4>
+        <div class="div-tam">
+            <p>Tamanho:</p>
+            <select id="se" name="select" class="bnt-tam">
+                <option value="0" selected disabled>Selecione</option>
+                <option value="P">P</option>
+                <option value="M">M</option>
+                <option value="G">G</option>
+                <option value="GG">GG</option>
+            </select>
+            <br>
+            <br>
+        </div>
+        <div class="quant-junt">
+            <p>Quantidade:</p>
+            <input class="quant" type="number">
+        </div>
+        <button class="adicionar" onclick="produto.adicionar()">Comprar</button>
+    </div>
+</main>
+<br><br><br><br><br>
+<div class="desc">
+    <h2>Descrição</h2>
+    <hr class="hr1">
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores quam, blanditiis voluptatibus, consequatur praesentium libero cumque eligendi ipsa nemo est debitis atque, alias omnis perferendis a odio delectus quasi. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dicta eaque doloribus ad minima, placeat est quaerat culpa neque! Dignissimos ipsa voluptatem itaque asperiores deserunt fugiat impedit, consectetur laborum tempore iusto! Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate expedita obcaecati tenetur corporis dolores deleniti quos! Ea esse impedit quidem, quibusdam eligendi iste porro repudiandae explicabo earum ipsum, nulla distinctio! Lorem, ipsum dolor sit amet consectetur adipisicing elit. Temporibus eveniet ea eius quisquam culpa aut tempore, odit amet consectetur vitae perferendis ipsum, architecto quaerat. Eos optio molestias sunt laudantium dicta. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cum, in. Tenetur sapiente accusamus iste voluptatibus aperiam eius cupiditate, quos non nam quod necessitati.</p>
+</div>
+              <!--carrinho-->
+              <button id="z" class="bnt-car-exit" onclick="produto.carrinho(); produto.carrinho1()">Carrinho</button>
+
+              <div id="main-open" class="carrinho">
+                  <div class="carrinho-main">
+                        <p class="name-car">Carrinho</p>
+      
+                        <div  class="pedido-vazio">
+                            <div class="pedido-main">
+                                <div class="tabela">
+                                    <table>
+                                        <tbody id="carrinho-produtos">
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                            <h2 id="totalm" style="text-align: center; margin: 0;">Total : </h2>
+
+                          <button class="bnt-finalizar">Finalizar Compra</button>
+                      </div>
+                      
+                      <button class="exit-car" onclick="produto.carrinho(); produto.carrinho1()">
+                          <div class="bnt-y"></div>
+                          <div class="bnt-x"></div>
+                      </button>
+
+                  </div>
+              </div>
+
+
+
+              <!--back to top-->
+              <div class="back-to-top" id="arrowTop" style="display: none;">
+                <a href="#top" ><img src="img/arrow-top.svg" id="arrow"></a>
+            </div>
+</body>
+</html>
